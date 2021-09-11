@@ -1,0 +1,941 @@
+<testsuite errors="0" failures="0" hostname="EnricodePC.local" name="party_building.事件服务模块测试" skipped="0" tests="47" time="0.0" timestamp="2019-05-16T18:02:08.072211"><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-十九大报告题目 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-十九大报告题目 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【十九大报告题目】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【决胜全面建成小康社会，夺取新时代中国特色社会主义伟大胜利】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-十九大的主题 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-十九大的主题 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【十九大的主题】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【不忘初心，牢记使命，高举中国特色社会主义伟大旗帜，决胜全面建成小康社会，夺取新时代中国特色社会主义伟大胜利，为实现中华民族伟大复兴的中国梦不懈奋斗。】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-中国共产党初心和使命 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-中国共产党初心和使命 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【中国共产党初心和使命】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【为中国人民谋幸福，为中华民族谋复兴】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-四个伟大 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-四个伟大 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【四个伟大】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【实现伟大梦想，进行伟大斗争，建设伟大工程，推进伟大事业。起决定性作用的是党的建设新的伟大工程。】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-我国社会主要矛盾 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-我国社会主要矛盾 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【我国社会主要矛盾】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾。】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-五位一体 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-五位一体 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【五位一体】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【经济建设、政治建设、文化建设、社会建设、生态文明建设】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-四个全面 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-四个全面 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【四个全面】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【全面建成小康社会、全面深化改革、全面依法治国、全面从严治党。】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-四个自信 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-四个自信 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【四个自信】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【道路自信、理论自信、制度自信、文化自信。】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-四个意识 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-四个意识 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【四个意识】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【政治意识、大局意识、核心意识、看齐意识】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-六大纪律 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-六大纪律 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【六大纪律】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【政治纪律、组织纪律、廉洁纪律、群众纪律、工作纪律、生活纪律】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-五大发展理念 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-五大发展理念 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【五大发展理念】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【创新、协调、绿色、开放、共享】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-五大思维 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-五大思维 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【五大思维】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【战略思维、创新思维、辩证思维、法治思维、底线思维】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-新时期好干部 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-新时期好干部 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【新时期好干部】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【信念坚定、为民服务、勤政务实、敢于担当、清正廉洁。】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-党的三大历史任务 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-党的三大历史任务 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【党的三大历史任务】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【推进现代化建设、完成祖国统一、维护世界和平与促进共同发展】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-两大任务 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-两大任务 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【两大任务】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【决胜全面建成小康社会、开启全面建设社会主义现代化国家新征程。】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-四大考验 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-四大考验 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【四大考验】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【执政考验、改革开放考验、市场经济考验、外部环境考验】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-四大危险 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-四大危险 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【四大危险】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【精神懈怠危险、能力不足危险、脱离群众危险、消极腐败危险】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-中国梦 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-中国梦 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【中国梦】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【实现中华民族伟大复兴，是近代以来中国人民最伟大梦想，我们称之为“中国梦”。中国梦的基本内涵是实现国家富强、民族振兴、人民幸福】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-社会主义核心价值观 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-社会主义核心价值观 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【社会主义核心价值观】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【富强、民主、文明、和谐、自由、平等、公正、法治、爱国、敬业、诚信、友善。】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-新时代的时代定位 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-新时代的时代定位 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【新时代的时代定位】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【中国特色社会主义进入了新时代，这是我国发展新的历史方位。这个新时代，是承前启后、继往开来、在新的历史条件下继续夺取中国特色社会主义伟大胜利的时代，是决胜全面建成小康社会、进而全面建设社会主义现代化强国的时代，是全国各族人民团结奋斗、不断创造美好生活、逐步实现全体人民共同富裕的时代，是全体中华儿女勠力同心、奋力实现中华民族伟大复兴中国梦的时代，是我国日益走近世界舞台中央、不断为人类作出更大贡献的时代】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-二十字好干部标准、好干部标准 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-二十字好干部标准、好干部标准 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【二十字好干部标准、好干部标准】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【信念坚定、为民服务、勤政务实、敢于担当、清正廉洁】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-一岗双责 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-一岗双责 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【一岗双责】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【“一岗”就是一个领导干部的职务所对应的岗位；“双责”就是一个领导干部既要对所在岗位应当承担的具体业务工作负责，又要对所在岗位应当承担的党风廉政建设责任制负责；也就是一个单位的领导干部应当对这个单位的业务工作和党风廉政建设负双重责任】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-两学一做 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-两学一做 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【两学一做】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【学党章党规、学系列讲话，做合格党员】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-四讲四有 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-四讲四有 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【四讲四有】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【讲政治、有信念，讲规矩、有纪律，讲道德、有品行，讲奉献、有作为】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-十九大精神-七大战略 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-十九大精神-七大战略 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【七大战略】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【实施科教兴国战略、人才强国战略、创新驱动发展战略、乡村振兴战略、区域协调战略、可持续发展战略、军民融合战略】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-党章党规-党的纪律处分 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-党章党规-党的纪律处分 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【党的纪律处分】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【警告、严重警告、撤销党内职务、留党察看、开除党籍。留党察看最长不超过两年，党员在留党察看期间没有表决权、选举权和被选举权】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-党章党规-四个服从 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-党章党规-四个服从 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【四个服从】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【党员个人服从党的组织，少数服从多数，下级组织服从上级组织，全党各个组织和全体党员服从党的全国代表大会和中央委员会】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-党章党规-两个务必 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-党章党规-两个务必 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【两个务必】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【务必使同志们继续保持谦虚、谨慎、不骄、不躁的作风，务必使同志们继续保持艰苦奋斗的作风】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-党章党规-党的三大作风 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-党章党规-党的三大作风 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【党的三大作风】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【理论联系实际，密切联系群众，批评与自我批评】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-党章党规-党的三大法宝 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-党章党规-党的三大法宝 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【党的三大法宝】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【统一战线、武装斗争、党的建设】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-党章党规-八项规定 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-党章党规-八项规定 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【八项规定】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【改进调查研究；精简会议活动；精简文件简报；规范出访活动；改进警卫工作；改进新闻报道；严格文稿发表；厉行勤俭节约】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-党章党规-党的基层组织 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-党章党规-党的基层组织 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【党的基层组织】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【分为基层委员会、党总支委员会、支部委员会】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-党章党规-中国共产党的性质 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-党章党规-中国共产党的性质 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【中国共产党的性质】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【中国共产党是中国工人阶级的先锋队，同时是中国人民和中华民族的先锋队，是中国特色社会主义事业的领导核心，代表中国先进生产力的发展要求，代表中国先进文化的前进方向，代表中国最广大人民的根本利益】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-党章党规-党的最高理想和最终目标 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-党章党规-党的最高理想和最终目标 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【党的最高理想和最终目标】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【实现共产主义】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-党章党规-党的行动指南 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-党章党规-党的行动指南 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【党的行动指南】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想、科学发展观、习近平新时代中国特色社会主义思想】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-党章党规-习近平新时代中国特色社会主义思想 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-党章党规-习近平新时代中国特色社会主义思想 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【习近平新时代中国特色社会主义思想】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【十八大以来，以习近平同志为主要代表的中国共产党人，顺应时代发展，从理论和实践结合上系统回答了新时代坚持和发展什么样的中国特色社会主义、怎样坚持和发展中国特色社会主义这个重大时代课题，创立了习近平新时代中国特色社会主义思想。习近平新时代中国特色社会主义思想是对马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想、科学发展观的继承和发展，是马克思主义中国化最新成果，是党和人民实践经验和集体智慧的结晶，是中国特色社会主义理论体系的重要组成部分，是全党全国人民为实现中华民族伟大复兴而奋斗的行动指南，必须长期坚持并不断发展。】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-党章党规-三重一大 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-党章党规-三重一大 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【三重一大】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【“重大问题决策、重要干部任免、重大项目投资决策、大额资金使用”，必须经集体讨论做出决定的制度。】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-党章党规-三会一课 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-党章党规-三会一课 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【三会一课】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【三会一课是指支部党员大会、支部委员会、党小组会，按时上好党课。】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-党章党规-民主生活会 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-党章党规-民主生活会 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【民主生活会】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【民主生活会是指党员领导干部召开的旨在开展批评与自我批评的组织活动制度。】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-党章党规-组织生活会 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-党章党规-组织生活会 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【组织生活会】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【组织生活会是指党支部（党小组）以交流思想、总结经验教训、开展批评与自我批评为中心内容的组织生活制度。党支部（党小组）组织生活会一般每季度或半年召开一次。】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-党章党规-民主评议 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-党章党规-民主评议 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【民主评议】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【是在党内民主生活会上，或各类思想教育活动中，党团组织或行政组织中的成员，共同对某一个人在思想、学习、组织纪律、工作、廉洁等方面的评价。把大家的评价综合起来，形成文字材料】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-联通党建-中国联通的愿景 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-联通党建-中国联通的愿景 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【中国联通的愿景】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【客户信赖的智慧生活创造者】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-联通党建-中国联通的使命 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-联通党建-中国联通的使命 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【中国联通的使命】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【联通世界，创享美好智慧生活】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-联通党建-中国联通的核心价值观 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-联通党建-中国联通的核心价值观 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【中国联通的核心价值观】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【客户为本、团队共进、开放创新、追求卓越】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-联通党建-中国联通的经营管理理念 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-联通党建-中国联通的经营管理理念 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【中国联通的经营管理理念】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【一切为了客户，一切为了一线，一切为了市场】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-联通党建-混改十六字方针 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-联通党建-混改十六字方针 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【混改十六字方针】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【完善治理、强化激励、突出主业、提高效率】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="party_building.事件服务模块测试" name="党建私有回答技能-联通党建-五新联通 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @PartyBuilding
+  场景大纲: 党建私有回答技能-联通党建-五新联通 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【五新联通】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【新基因、新治理、新运营、新动能、新生态。培育强健互联网新基因，探索完善公司混改新治理，全力加快互联网化新运营，着力增强创新发展新动能，积极构建外联内通新生态。】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

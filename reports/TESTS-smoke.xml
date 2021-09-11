@@ -1,0 +1,2429 @@
+<testsuite errors="0" failures="0" hostname="EnricodePC.local" name="smoke.事件服务模块测试" skipped="0" tests="88" time="0.0" timestamp="2019-05-16T18:02:10.847801"><testcase classname="smoke.事件服务模块测试" name="时间查询 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 时间查询 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【时间查询】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【现在几点】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】为【时间】，参数【textField】包含【:】，参数【subtextField】为空 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【:】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="天气查询 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 天气查询 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【天气】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【广州今天天气】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【WeatherTemplate】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【广州】和【今天】和以下内容之一 ... untested in 0.000s
+      | weather |
+      | 晴       |
+      | 多云      |
+      | 小雨      |
+      | 雨       |
+      | 阵雨      |
+      | 雷阵雨     |
+      | 暴雨      |
+      | 霾       |
+      | ℃       |
+      | 热       |
+      | 冷       |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="新闻 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 新闻 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【新闻】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【来点新闻】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content                |
+      | 虽然我不是很厉害，但忍不住心系天下呢         |
+      | 不知道听什么的时候我也爱听新闻            |
+      | 一起了解下国家大事[=shi4]吧          |
+      | 我觉得[p100]这些事蛮[=man3]重要的    |
+      | 这[=zhe4]些事[p100]你听了也会大吃一惊呢 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="音乐点播 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 音乐点播 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【音乐】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【来首歌】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content |
+      | 好的，一起来听     |
+      | 一起来听听       |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="评书点播 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 评书点播 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【评书点播】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【我要听评书】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【为你播放】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="戏曲点播 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 戏曲点播 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【戏曲点播】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【我要听京剧】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【为你播放】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="相声小品 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 相声小品 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【相声小品】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【我要听相声】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【为你播放】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="有声小说 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 有声小说 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【有声小说】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【播放小说】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【为你播放】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="广播电台 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 广播电台 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【广播电台】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【我要听广播】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【为你播放】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="笑话 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 笑话 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【广播电台】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【来个笑话】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含随机内容 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="历史-历史 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 历史-历史 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【历史】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【乾隆皇帝的历史】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【乾隆皇帝】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="故事-故事 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 故事-故事 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【故事】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【给我讲个故事吧】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content |
+      | 一起来听        |
+      | 嗯，我们一起来听    |
+      | 好啊，我们一起听听   |
+      | 要乖乖睡觉了哦。    |
+      | 来了，喜欢的话，记得给 |
+      | 好的，小飞和你一起听  |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="超级简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 超级简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【超级简报】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开超级简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content      |
+      | 最新的电竞赛事报道        |
+      | 掌握最新房价动态         |
+      | 每天3分钟，掌握汽车新动态    |
+      | 传递全球教育新知         |
+      | 腾讯今天的新动作         |
+      | 你喜欢的电视剧有更新啦      |
+      | 吃最新鲜的瓜           |
+      | 今天有哪些大公司传出了坏消息？  |
+      | 每天3分钟，掌握最热资讯     |
+      | 新片儿早知道           |
+      | 全球体育赛事追踪         |
+      | 找到你的Style        |
+      | 每天提供育儿信息，呵护孩子成长  |
+      | 每日供应最新鲜的财经资讯     |
+      | 全面及时的NBA资讯播报     |
+      | 过去的今天发生了什么？      |
+      | 你不能错过的今日要闻       |
+      | 速览前沿科技           |
+      | 网罗全球新鲜的IT数码行业新闻  |
+      | 最新的动漫、手办、游戏及周边情报 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="36氪快讯 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 36氪快讯 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【36氪快讯】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开36氪快讯】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【为你播放36氪快讯，以下是最新科技新闻】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="智能跑走 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 智能跑走 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【智能跑走】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开智能跑走】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【停止播放】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Stop】 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="修行者 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 修行者 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【修行者】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开修行者】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【和我说“开始坐禅”开始今天的坐禅修行。也可以和我说“播放音乐”，我会为你播放悦耳梵音。】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【开始坐禅】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【今天，你想选择多长时间的坐禅呢？5分钟，10分钟，还是15分钟呢？】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【5分钟】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含随机内容 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="音量控制-设置音量 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 音量控制-设置音量 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【音量控制】技能已打开 ... untested in 0.000s
+    假如 iFlyOS客户端正在播放音乐 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【把音量设置为11%】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【Speaker】，【SetVolume】，参数【volume】为【11】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Speaker】，【VolumeChanged】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【现在音量多少】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【现在音量为百分之11】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="音量控制-调整音量 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 音量控制-调整音量 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【音量控制】技能已打开 ... untested in 0.000s
+    假如 iFlyOS客户端正在播放音乐 ... untested in 0.000s
+    假如 iFlyOS客户端音量为【50%】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【现在音量多少】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【现在音量为百分之50】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【大声一点】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【Speaker】，【SetVolume】，参数【volume】为【60】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Speaker】，【VolumeChanged】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【现在音量多少】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【现在音量为百分之60】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="音量控制-调整音量 -- @1.2 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 音量控制-调整音量 -- @1.2 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【音量控制】技能已打开 ... untested in 0.000s
+    假如 iFlyOS客户端正在播放音乐 ... untested in 0.000s
+    假如 iFlyOS客户端音量为【50%】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【现在音量多少】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【现在音量为百分之50】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【小声一点】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【Speaker】，【SetVolume】，参数【volume】为【40】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Speaker】，【VolumeChanged】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【现在音量多少】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【现在音量为百分之40】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="音量控制-设置静音 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 音量控制-设置静音 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【音量控制】技能已打开 ... untested in 0.000s
+    假如 iFlyOS客户端正在播放音乐 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【静音】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【Speaker】，【SetMute】，参数【mute】为【true】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Speaker】，【MuteChanged】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="音量控制-取消静音 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 音量控制-取消静音 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【音量控制】技能已打开 ... untested in 0.000s
+    假如 iFlyOS客户端正在播放音乐 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消静音】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【Speaker】，【SetMute】，参数【mute】为【false】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Speaker】，【MuteChanged】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="音频播放器-pause//暂停播放 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 音频播放器-pause//暂停播放 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【音频播放器】技能已打开 ... untested in 0.000s
+    假如 iFlyOS客户端正在播放音乐 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【暂停】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Stop】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStopped】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="音频播放器-resume//继续播放 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke @fail
+  场景大纲: 音频播放器-resume//继续播放 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【音频播放器】技能已打开 ... untested in 0.000s
+    假如 iFlyOS客户端在【60000】暂停播放了音乐 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【继续播放】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】，参数【offsetInMilliseconds】为【60000】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】，参数【offsetInMilliseconds】为【60000】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="音乐点播-音频收藏 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 音乐点播-音频收藏 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【音乐点播】技能已打开 ... untested in 0.000s
+    假如 iFlyOS客户端正在播放音乐 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackPaused】，参数【offsetInMilliseconds】为【60000】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【喜欢这首歌】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【收藏】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackResumed】，参数【offsetInMilliseconds】为【60000】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="音乐点播-播放收藏的音乐 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 音乐点播-播放收藏的音乐 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【音乐点播】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【播放我的收藏】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【为你播放】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="音频播放器-next//切换到播放列表中的下一个 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 音频播放器-next//切换到播放列表中的下一个 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【音频播放器】技能已打开 ... untested in 0.000s
+    假如 iFlyOS客户端正在播放音乐 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【下一首】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStopped】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="音频播放器-previous//切换到播放列表中的上一个 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 音频播放器-previous//切换到播放列表中的上一个 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【音频播放器】技能已打开 ... untested in 0.000s
+    假如 iFlyOS客户端正在播放音乐 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【下一首】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStopped】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【上一首】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStopped】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="音频播放器-查询当前节目 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 音频播放器-查询当前节目 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【音频播放器】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【我要听周杰伦的稻香】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content |
+      | 周杰伦         |
+      | 稻香          |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackPaused】，参数【offsetInMilliseconds】为【60000】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【这是什么歌】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【现在播放的是周杰伦的稻香】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackResumed】，参数【offsetInMilliseconds】为【60000】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="设置闹钟/提醒-设置闹钟成功 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke @Alerts
+  场景大纲: 设置闹钟/提醒-设置闹钟成功 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【设置闹钟/提醒】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【明天上午八点提醒我】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】为【闹钟】，参数【textField】包含【08:00】，参数【subtextField】为None ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts                    |
+      | 好的，已为你设置好明天上午八点的闹钟     |
+      | 好的，交给我吧，我会在明天上午八点提醒你   |
+      | 已帮你定好明天上午八点的闹钟，我会准时提醒你 |
+      | 没问题，已帮你把闹钟设置到明天上午八点    |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端下行通道回复的directive为【Alerts】，【SetAlert】，参数【scheduledTime】为【00:00:00】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Alerts】，【SetAlertSucceeded】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="设置闹钟/提醒-闹钟时间到响铃" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke @Alerts
+  场景: 设置闹钟/提醒-闹钟时间到响铃
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【设置闹钟/提醒】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【明天上午十点提醒我回家吃饭】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【<template_type>】，参数【token】不为空，参数【title】为【<title>】，参数【textField】包含【<text_field>】，参数【subtextField】包含【<sub_text_field>】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts                        |
+      | 好的，已为你设置好明天上午十点回家吃饭的闹钟     |
+      | 好的，交给我吧，我会在明天上午十点提醒你回家吃饭   |
+      | 已帮你定好明天上午十点的闹钟，我会准时提醒你回家吃饭 |
+      | 没问题，已帮你把回家吃饭闹钟设置到明天上午十点    |
+      | 好的，我会在明天上午十点提醒你回家吃饭        |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端下行通道回复的directive为【Alerts】，【SetAlert】，参数【scheduledTime】为【02:00】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Alerts】，【SetAlertSucceeded】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Alerts】，【AlertStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Alerts】，【AlertEnteredForeground】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="设置闹钟/提醒-闹钟响铃时停止闹钟 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke @Alerts
+  场景大纲: 设置闹钟/提醒-闹钟响铃时停止闹钟 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【设置闹钟/提醒】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【明天上午十点提醒我回家吃饭】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【<template_type>】，参数【token】不为空，参数【title】为【<title>】，参数【textField】包含【<text_field>】，参数【subtextField】包含【<sub_text_field>】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts                        |
+      | 好的，已为你设置好明天上午十点回家吃饭的闹钟     |
+      | 好的，交给我吧，我会在明天上午十点提醒你回家吃饭   |
+      | 已帮你定好明天上午十点的闹钟，我会准时提醒你回家吃饭 |
+      | 没问题，已帮你把回家吃饭闹钟设置到明天上午十点    |
+      | 好的，我会在明天上午十点提醒你回家吃饭        |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端下行通道回复的directive为【Alerts】，【SetAlert】，参数【scheduledTime】为【02:00】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Alerts】，【SetAlertSucceeded】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Alerts】，【AlertStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Alerts】，【AlertEnteredForeground】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Alerts】，【AlertEnteredBackground】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【停止闹钟】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端下行通道回复的directive为【Alerts】，【DeleteAlert】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Alerts】，【DeleteAlertSucceeded】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="设置闹钟/提醒-查询闹钟 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke @Alerts
+  场景大纲: 设置闹钟/提醒-查询闹钟 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【设置闹钟/提醒】技能已打开 ... untested in 0.000s
+    假如 iFlyOS客户端已设置【晚上九点提醒我吃饭】的闹钟 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【我有几个闹钟】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【ListTemplate1】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content    |
+      | 你有1个闹钟，是今天晚上9点 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="设置闹钟/提醒-删除单次闹钟 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke @Alerts @disable
+  场景大纲: 设置闹钟/提醒-删除单次闹钟 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【设置闹钟/提醒】技能已打开 ... untested in 0.000s
+    假如 iFlyOS客户端已设置【晚上九点提醒我吃饭】的闹钟 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【删除晚上九点钟的闹钟】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content                     |
+      | 删除闹钟功能还在学习中，暂时请到手机APP上进行闹钟删除操作吧 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="设置闹钟/提醒-删除循环闹钟 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke @Alerts @disable
+  场景大纲: 设置闹钟/提醒-删除循环闹钟 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【设置闹钟/提醒】技能已打开 ... untested in 0.000s
+    假如 iFlyOS客户端已设置【每天晚上九点提醒我吃饭】的闹钟 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【删除每天晚上九点钟的闹钟】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content                     |
+      | 删除闹钟功能还在学习中，暂时请到手机APP上进行闹钟删除操作吧 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="设置闹钟/提醒-清空闹钟列表 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke @Alerts
+  场景大纲: 设置闹钟/提醒-清空闹钟列表 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【设置闹钟/提醒】技能已打开 ... untested in 0.000s
+    假如 iFlyOS客户端已设置【晚上九点提醒我吃饭】的闹钟 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【删除所有闹钟】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【好的，已为你删除全部闹钟】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端下行通道回复的directive为【Alerts】，【DeleteAlert】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Alerts】，【DeleteAlertSucceeded】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="计时器 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 计时器 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【计时器】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【一分钟倒计时】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】为【倒计时】，参数【textField】包含【好的，我会在1分钟后提醒你】，参数【subtextField】包含【设置成功】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【1分钟】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端下行通道回复的directive为【Alerts】，【SetAlert】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Alerts】，【SetAlertSucceeded】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Alerts】，【AlertStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Alerts】，【AlertEnteredForeground】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【Alerts】，【AlertStopped】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="油价查询 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 油价查询 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【油价查询】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【安徽柴油什么价格】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【ListTemplate1】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【安徽省】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="限行查询 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 限行查询 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【限行查询】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【查询今天北京的限行】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【限行】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="计算器 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 计算器 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【计算器】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【1+1等于多少】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】为【计算】，参数【textField】包含【2】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【等于2】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="放假安排 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 放假安排 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【节假日查询】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【国庆节放假安排】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content               |
+      | 2019年国庆节是2019-10-01，放假安排是 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="词语解释 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 词语解释 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【词语解释】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【怎么解释词语风马牛不相及】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate1】，参数【token】不为空，参数【mainTile】为【风马牛不相及】，参数【subTile】为【fēng mǎ niú bù xiāng jí】，参数【textField】包含【比喻事物彼此毫不相干】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【比喻事物彼此毫不相干】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="成语查询 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 成语查询 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【成语查询】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【查下成语马到成功】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate1】，参数【token】不为空，参数【mainTile】为【马到成功】，参数【subTile】为空，参数【textField】包含【形容工作刚开始就取得成功】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【形容工作刚开始就取得成功】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="股票查询 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 股票查询 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【股票查询】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【中兴通讯的股票】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【中兴通讯当前股价】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="翻译 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 翻译 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【翻译】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【帮我翻译所见即所得】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】为【中英翻译】，参数【textField】包含【What you see is what you get】，参数【subtextField】包含【所见即所得】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【What you see is what you get】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="古诗词 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 古诗词 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【古诗词】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【李白的静夜思】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate1】，参数【token】不为空，参数【mainTile】为【静夜思】，参数【subTile】为【李白】，参数【textField】包含【床前明月光，疑是地上霜。举头望明月，低头思故乡。】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【床前明月光，疑是地上霜。】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="食物热量 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 食物热量 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【食材百科】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【200克苹果的热量】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】为【食物热量】，参数【textField】包含【热量】，参数【subtextField】包含【200克苹果】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【106千卡的热量】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="近反义词 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 近反义词 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【近反义词】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【开心的近义词】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate1】，参数【token】不为空，参数【mainTile】为【开心】，参数【subTile】为【近义词】，参数【textField】包含【、】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含随机内容 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="美食天下菜谱" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景: 美食天下菜谱
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【美食天下菜谱】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开美食天下】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【欢迎使用美食天下】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【今天吃什么】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【我来给你推荐几道菜吧】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【退出】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content      |
+      | 期待下次继续使用美食天下菜谱技能 |
+      | 再见               |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="成语接龙 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 成语接龙 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【成语接龙】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开成语接龙】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Stop】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【欢迎来玩成语接龙】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【我先开始】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content     |
+      | 请先给我一个成语吧，比如：   |
+      | 那请先跟我说一个成语哦，比如： |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="词语接龙 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke @disable
+  场景大纲: 词语接龙 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【词语接龙】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开词语接龙】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【词语接龙】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【天地】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【地】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【退出】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【谢谢】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="百科问答 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 百科问答 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【百科问答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【恐龙为什么会灭绝】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【恐龙】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="白噪音" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke @Audio
+  场景: 白噪音
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【白噪音】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开白噪音】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【为你播放白噪音】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="眼保健操" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke @Audio
+  场景: 眼保健操
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【眼保健操】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开眼保健操】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【眼保健操开始】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="冥想时刻 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke @Audio
+  场景大纲: 冥想时刻 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【冥想时刻】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开冥想时刻】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【为你播放冥想时刻】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="好好睡觉" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke @Audio
+  场景: 好好睡觉
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【好好睡觉】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开好好睡觉】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【为你播放助眠音乐，晚安】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="越听越聪明" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke @Audio
+  场景: 越听越聪明
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【越听越聪明】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开越听越聪明】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【为你播放越听越聪明】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="口算挑战 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke @fail
+  场景大纲: 口算挑战 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【口算挑战】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开口算挑战】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content |
+      | 请回答         |
+      | 请问          |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【10】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content |
+      | 回答正确        |
+      | 正确答案是       |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【不玩了】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【共[n2]1题，您答对[n2]】和【道题,正确率为：】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="诗词挑战 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 诗词挑战 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【诗词挑战】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开诗词挑战】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Stop】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【好的，开始挑战吧。请先选择题目类型。题目类型分为两类，一类是回答诗句、一类是回答诗人。请选择】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【回答诗句】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【好的，请仔细听题】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【但愿人长久】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content    |
+      | 回答正确           |
+      | 回答错误，上一题的正确答案是 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【退出】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content |
+      | 你一题也没有答对    |
+      | 全都答对了       |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="挑战单词 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 挑战单词 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【挑战单词】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开挑战单词】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content                                          |
+      | 欢迎来到挑战单词。游戏有四关，难度递增。我给你一个单词，你来猜这个单词的类型。准备好了对我说“开始游戏” |
+      | 欢迎回到挑战单词。你可以了解玩法或开始挑战                                |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【开始游戏】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【第1关：请直接说出这个单词的类型。第1题：】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【坦率诚实】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content |
+      | 正确答案是       |
+      | 你答对了        |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【不玩了】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【谢谢你参与挑战单词。你在第】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="九九乘法表 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 九九乘法表 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【九九乘法表】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【练习九九乘法表】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【好的,小朋友注意了，我要出几道题考考你】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【24】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content |
+      | 答对了         |
+      | 这道题正确答案是    |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【退出】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已退出】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="会说话的小鹦鹉 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 会说话的小鹦鹉 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【会说话的小鹦鹉】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开会说话的小鹦鹉】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【小鹦鹉】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【换一个声音】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content |
+      | 我变了一个超有型的声音 |
+      | 小鹦鹉变身成功     |
+      | 小鹦鹉变身       |
+      | 小鹦鹉变声成功     |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【把语速调快一点】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content |
+      | 小鹦鹉已经调整了语速  |
+      | 小鹦鹉变声成功     |
+      | 小鹦鹉变速成功     |
+      | 我的语速要变了哦    |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【我不想玩了】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content                   |
+      | 今天玩的很开心，谢谢你啦，碰到有意思的东西，记得再教教我哟 |
+      | 今天小鹦鹉真是收获满满，很开心跟你一起玩耍，再见啦     |
+      | 小鹦鹉也要回窝休息啦，待会再玩吧              |
+      | 时光一去不复回，期待下次再与你相会。            |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="打开如意冥想音乐 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke @Audio @disable
+  场景大纲: 打开如意冥想音乐 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【如意冥想音乐】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开如意冥想音乐】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【安然地冥想音乐帮你摆脱心念的滋扰，下雨声、鸟叫声、海浪声和流水声，随你点播】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【下雨声】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【退出】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已退出】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="英语每日一句 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 英语每日一句 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【英语每日一句】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【我要学英语】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate1】，参数【token】不为空，参数【mainTile】包含【年】，参数【subTile】包含【英语每日一句】，参数【textField】不为空 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含随机内容 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="造句 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 造句 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【造句】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【用鸦雀无声造句】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】为【造句】，参数【textField】包含【鸦雀无声】，参数【subtextField】包含【鸦雀无声】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【鸦雀无声】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="首都查询 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 首都查询 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【首都查询】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【中国的首都在哪】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【中国的首都】和【北京】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="世界杯 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 世界杯 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【世界杯】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【俄罗斯和沙特的赛果】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【世界杯】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="面积换算 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 面积换算 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【面积换算】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【1平方米换成平方厘米大约是多少】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】为【单位换算】，参数【textField】包含【10000(平方厘米)】，参数【subtextField】包含【1(平方米)】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【[n2]1平方米等于[n2]10000平方厘米】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="体积换算 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 体积换算 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【体积换算】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【1立方米等于多少升】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】为【单位换算】，参数【textField】包含【1000(升)】，参数【subtextField】包含【1(立方米)】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【[n2]1立方米等于[n2]1000升】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="进制转换 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 进制转换 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【进制转换】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【二进制的1111等于十进制的多少】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】为【单位换算】，参数【textField】包含【15(十进制)】，参数【subtextField】包含【1111(二进制)】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【二进制1111等于十进制15】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="功率换算 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 功率换算 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【功率换算】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【一千瓦等于多少焦耳每秒】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】为【单位换算】，参数【textField】包含【1000(焦耳每秒)】，参数【subtextField】包含【1(千瓦)】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【[n2]1千瓦等于[n2]1000焦耳每秒】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="重量换算 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 重量换算 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【重量换算】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【能告诉我1吨等于多少千克吗】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】为【单位换算】，参数【textField】包含【1000(千克)】，参数【subtextField】包含【1(吨)】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【[n2]1吨等于[n2]1000千克】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="单位换算 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 单位换算 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【单位换算】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【8米等于多少厘米】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】为【单位换算】，参数【textField】包含【800(厘米)】，参数【subtextField】包含【8(米)】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【8米等于800厘米】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="单位换算 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 单位换算 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【单位换算】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【20摄氏度等于多少华氏度】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】为【单位换算】，参数【textField】包含【68(华氏度)】，参数【subtextField】包含【20(摄氏度)】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【[n2]20摄氏度等于[n2]68华氏度】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="省会查询 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 省会查询 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【省会查询】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【安徽的省会是什么】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【是合肥市】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="万年历查询 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 万年历查询 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【万年历查询】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【今天不适合做什么】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate1】，参数【token】不为空，参数【mainTile】为【今天不适合做什么】，参数【subTile】为空，参数【textField】包含【不宜】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【农历】和【不适合】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="十万个为什么 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 十万个为什么 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【十万个为什么】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【为什么脑子会越用越灵】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【有人会担心，用脑过度会有损健康。事实上，这是没有科学根据的。相反的是人的脑子可以越用越灵。勤动脑，大脑就会永葆青春;思想懒惰了，就会反应迟钝，甚至可能成为痴呆】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="热点 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 热点 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【热点】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【赵日天是谁】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【在下赵日天，狂霸天下之我最牛】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="生肖运势 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 生肖运势 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【生肖运势】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【今年出生的是什么生肖】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】为【生肖】，参数【textField】不为空，参数【subtextField】不为空 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【的生肖为】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="高校查询 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 高校查询 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【高校查询】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【北京有哪些大学】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate1】，参数【token】不为空，参数【mainTile】为【北京有哪些大学】，参数【subTile】为【高校查询】，参数【textField】包含【大学】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【大学】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="星座 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 星座 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【星座】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【白羊座今年的运势】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate1】，参数【token】不为空，参数【mainTile】为【白羊座】，参数【subTile】为【星座运势】，参数【textField】包含【白羊座的综合运势】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【白羊座的综合运势】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="汇率查询与货币兑换 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 汇率查询与货币兑换 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【汇率查询与货币兑换】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【50美元可以兑换多少人民币】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】为【查汇率】，参数【textField】包含【人民币】，参数【subtextField】包含【50美元】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【50美元可兑换成】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="家族关系神器 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 家族关系神器 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【家族关系神器】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【爸爸的爸爸是我的什么】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】为【亲属称谓】，参数【textField】包含【爷爷】，参数【subtextField】包含【爸爸的爸爸是】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【爸爸的爸爸是你的爷爷】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="百家姓 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 百家姓 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【百家姓】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【百家姓你知道有哪些吗】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate1】，参数【token】不为空，参数【mainTile】为【百家姓你知道有哪些吗】，参数【subTile】为空，参数【textField】包含【赵钱孙李，周吴郑王。冯陈楮卫，蒋沈韩杨】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【赵钱孙李，周吴郑王。冯陈楮卫，蒋沈韩杨】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="国内城市查询 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 国内城市查询 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【国内城市查询】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【安徽省有哪些城市】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate1】，参数【token】不为空，参数【mainTile】为【安徽省有哪些城市】，参数【subTile】为空，参数【textField】包含【安徽省一共有16座城市】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【安徽省一共有16座城市，分别是:合肥市、芜湖市】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="经典名句 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 经典名句 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【经典名句】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【丘吉尔的名言】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate1】，参数【token】不为空，参数【mainTile】为【经典名言】，参数【subTile】为空，参数【textField】包含【丘吉尔】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【丘吉尔】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="飞花令 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 飞花令 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【飞花令】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开飞花令】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【玩飞花令】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【退出】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含随机内容 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="智能家居 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 智能家居 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【智能家居】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开灯】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderTemplate】，参数【type】为【BodyTemplate3】，参数【token】不为空，参数【title】和【textField】包含以下内容之一 ... untested in 0.000s
+      | title  | text_field |
+      | 执行失败原因 | 未找到设备      |
+      | 执行失败原因 | 请检查网络      |
+      | 开关控制   | 设备已开启      |
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content |
+      | 好的          |
+      | 没有找到这个设备    |
+      | 请检查设备网络     |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke.事件服务模块测试" name="党建 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  场景大纲: 党建 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户产品【上报】端能力，端能力为【模板】且版本号为【1.0】 ... untested in 0.000s
+    假如 用户产品【党建私有回答】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【十九大报告题目】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【决胜全面建成小康社会，夺取新时代中国特色社会主义伟大胜利】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

@@ -1,0 +1,52 @@
+<testsuite errors="0" failures="1" hostname="EnricodePC.local" name="capability.事件服务模块测试" skipped="0" tests="1" time="7.329995" timestamp="2019-05-16T18:45:08.661233"><testcase classname="capability.事件服务模块测试" name="端能力-上报VisualActivityTracker端能力 -- @1.1 语料" status="failed" time="7.329995"><failure message="&#10;Expected: 'Speak'&#10;     but: was 'Stop'&#10;" type="AssertionError">
+<![CDATA[
+Failing step: 那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... failed in 0.001s
+  | tts_content |
+  | 一起来听        |
+Location: features/capability.feature:720
+Assertion Failed: 
+Expected: 'Speak'
+     but: was 'Stop'
+
+Captured logging:
+INFO:hyper.http20.connection:Received unhandled event <RemoteSettingsChanged changed_settings:{ChangedSetting(setting=SettingCodes.INITIAL_WINDOW_SIZE, original_value=65535, new_value=268435456)}>
+INFO:hyper.http20.connection:Received unhandled event <SettingsAcknowledged changed_settings:{ChangedSetting(setting=SettingCodes.ENABLE_PUSH, original_value=1, new_value=0)}>
+INFO:hyper.http20.connection:Received unhandled event <SettingsAcknowledged changed_settings:{}>
+INFO:hyper.http20.connection:Received unhandled event <WindowUpdated stream_id:0, delta:268369921>
+INFO:sdk.communications_library:[iFlyOS状态]正在倾听..........
+INFO:sdk.communications_library:听歌
+INFO:sdk.communications_library:status code: 200
+INFO:root:[播放状态]正在停止..........
+INFO:sdk.communications_library:text:即将为你播放音乐咖路里的【vol.29】贺岁电影还没上，先来听听歌
+INFO:root:[播放状态]正在播放..........]]>
+</failure><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Capability @wip @debug
+  场景大纲: 端能力-上报VisualActivityTracker端能力 -- @1.1 语料
+    假如 用户已有无屏产品 ... passed in 0.001s
+    假如 用户已绑定iFlyOS客户端设备 ... passed in 6.228s
+    假如 用户产品【上报】端能力，端能力为【视觉焦点】且版本号为【1.0】 ... passed in 0.333s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【听歌】 ... passed in 0.001s
+    那么 iFlyOS服务端回复状态为【200】成功 ... passed in 0.766s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... failed in 0.001s
+      | tts_content |
+      | 一起来听        |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... skipped in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... skipped in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... skipped in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... skipped in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... skipped in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... skipped in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... skipped in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... skipped in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... skipped in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... skipped in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... skipped in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

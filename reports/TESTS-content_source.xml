@@ -1,0 +1,387 @@
+<testsuite errors="0" failures="0" hostname="EnricodePC.local" name="content_source.事件服务模块测试" skipped="0" tests="13" time="0.0" timestamp="2019-05-16T18:02:06.847894"><testcase classname="content_source.事件服务模块测试" name="内容信源-超级简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @SuperBriefing
+  场景大纲: 内容信源-超级简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【超级简报】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开超级简讯】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content  |
+      | 每天3分钟，掌握最热资讯 |
+      | 每日供应最新鲜的财经资讯 |
+      | 过去的今天发生了什么？  |
+      | 速览前沿科技       |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="content_source.事件服务模块测试" name="内容信源-超级简报-科技简讯 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @SuperBriefing
+  场景大纲: 内容信源-超级简报-科技简讯 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【超级简报】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开科技简讯】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【速览前沿科技】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="content_source.事件服务模块测试" name="内容信源-超级简报-商业简讯 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @SuperBriefing
+  场景大纲: 内容信源-超级简报-商业简讯 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【超级简报】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开商业简讯】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【每日供应最新鲜的财经资讯】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="content_source.事件服务模块测试" name="内容信源-超级简报-全网热议 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @SuperBriefing
+  场景大纲: 内容信源-超级简报-全网热议 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【超级简报】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开全网热议】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【每天3分钟，掌握最热资讯】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="content_source.事件服务模块测试" name="内容信源-超级简报-历史上的今天 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @SuperBriefing
+  场景大纲: 内容信源-超级简报-历史上的今天 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【超级简报】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开历史上的今天】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【过去的今天发生了什么】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="content_source.事件服务模块测试" name="内容信源-超级简报-超级早报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @SuperBriefing
+  场景大纲: 内容信源-超级简报-超级早报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【超级简报】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开超级早报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【超级早报，资讯早知道】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="content_source.事件服务模块测试" name="内容信源-超级简报-超级晚报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @SuperBriefing
+  场景大纲: 内容信源-超级简报-超级晚报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【超级简报】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开超级晚报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【超级晚报，资讯先知道】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="content_source.事件服务模块测试" name="内容信源-超级简报-娱乐简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @SuperBriefing
+  场景大纲: 内容信源-超级简报-娱乐简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【超级简报】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开娱乐简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【即将为你提供热门娱乐简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="content_source.事件服务模块测试" name="内容信源-超级简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @SuperBriefing
+  场景大纲: 内容信源-超级简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【超级简报】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【超级简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content  |
+      | 每天3分钟，掌握最热资讯 |
+      | 每日供应最新鲜的财经资讯 |
+      | 过去的今天发生了什么？  |
+      | 速览前沿科技       |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="content_source.事件服务模块测试" name="内容信源-超级简报 -- @1.2 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @SuperBriefing
+  场景大纲: 内容信源-超级简报 -- @1.2 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【超级简报】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【超级简讯】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content  |
+      | 每天3分钟，掌握最热资讯 |
+      | 每日供应最新鲜的财经资讯 |
+      | 过去的今天发生了什么？  |
+      | 速览前沿科技       |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="content_source.事件服务模块测试" name="内容信源-超级简报 -- @1.3 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @SuperBriefing
+  场景大纲: 内容信源-超级简报 -- @1.3 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【超级简报】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开超级简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content  |
+      | 每天3分钟，掌握最热资讯 |
+      | 每日供应最新鲜的财经资讯 |
+      | 过去的今天发生了什么？  |
+      | 速览前沿科技       |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="content_source.事件服务模块测试" name="内容信源-超级简报 -- @1.4 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @SuperBriefing
+  场景大纲: 内容信源-超级简报 -- @1.4 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【超级简报】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【播放超级简讯】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content  |
+      | 每天3分钟，掌握最热资讯 |
+      | 每日供应最新鲜的财经资讯 |
+      | 过去的今天发生了什么？  |
+      | 速览前沿科技       |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="content_source.事件服务模块测试" name="内容信源-超级简报-科技简讯/商业简报/全网热议/历史上的今天/超级早报/超级晚报/娱乐简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @SuperBriefing
+  场景大纲: 内容信源-超级简报-科技简讯/商业简报/全网热议/历史上的今天/超级早报/超级晚报/娱乐简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【超级简报】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端从以下turn_on语料和文件【content.txt】里所有语料组合用户语音{turn_on}{content}，而且回复对应内容 ... untested in 0.000s
+      | turn_on |
+      | 打开      |
+      | 播放      |
+      | 听       |
+      | 看       |
+    当 iFlyOS客户端从以下turn_on语料和文件【content.txt和yq.txt】里所有语料组合用户语音{turn_on}{content}{yq}，而且回复对应内容 ... untested in 0.000s
+      | turn_on |
+      | 打开      |
+      | 播放      |
+      | 听       |
+      | 看       |
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

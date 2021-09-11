@@ -1,0 +1,2185 @@
+<testsuite errors="0" failures="0" hostname="EnricodePC.local" name="subscription.事件服务模块测试" skipped="0" tests="83" time="0.0" timestamp="2019-05-16T18:02:10.967746"><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号汽车简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号汽车简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号汽车简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放汽车简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号电影简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号电影简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号电影简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放电影简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号明星简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号明星简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号明星简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放明星简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号体育简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号体育简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号体育简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放体育简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号科技简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号科技简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号科技简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放科技简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号综合简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号综合简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号综合简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放综合简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号时尚简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号时尚简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号时尚简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放时尚简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号房产简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号房产简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号房产简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放房产简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号教育简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号教育简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号教育简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放教育简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号电竞简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号电竞简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号电竞简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放电竞简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号商业简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号商业简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号商业简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放商业简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号NBA简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号NBA简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号NBA简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放NBA简报       |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号数码简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号数码简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号数码简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放数码简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号二次元简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号二次元简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号二次元简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放二次元简报       |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号全网热议 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号全网热议 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号全网热议】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放全网热议        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号企鹅动态 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号企鹅动态 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号企鹅动态】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放企鹅动态        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号历史上的今天 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号历史上的今天 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号历史上的今天】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放历史上的今天      |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号大公司不开心 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号大公司不开心 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号大公司不开心】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放大公司不开心      |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已删除所有订阅号 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【你还没有订阅任何内容，快去订阅喜欢的内容吧】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【好嘞 正在为你播放汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    假如 用户已添加订阅内容【大公司不开心】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content                      |
+      | 更新的订阅号有：大公司不开心,汽车简报, 你要收听哪个订阅号呢？ |
+      | 更新的订阅号有：汽车简报,大公司不开心, 你要收听哪个订阅号呢？ |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【汽车简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放汽车简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅汽车简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅汽车简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅汽车简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅电影简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅电影简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅电影简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅电影简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅明星简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅明星简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅明星简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅明星简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅体育简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅体育简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅体育简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅体育简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅科技简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅科技简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅科技简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅科技简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅综合简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅综合简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅综合简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅综合简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅时尚简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅时尚简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅时尚简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅时尚简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅房产简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅房产简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅房产简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅房产简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅教育简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅教育简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅教育简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅教育简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅电竞简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅电竞简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅电竞简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅电竞简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅商业简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅商业简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅商业简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅商业简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅NBA简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅NBA简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅NBA简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅NBA简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅数码简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅数码简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅数码简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅数码简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅二次元简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅二次元简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅二次元简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅二次元简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅全网热议 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅全网热议 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅全网热议】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅全网热议】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅企鹅动态 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅企鹅动态 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅企鹅动态】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅企鹅动态】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅历史上的今天 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅历史上的今天 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅历史上的今天】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅历史上的今天】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-订阅大公司不开心 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-订阅大公司不开心 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅大公司不开心】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已帮你订阅大公司不开心】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅汽车简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅汽车简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅汽车简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅电影简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅电影简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅电影简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅电影简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅明星简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅明星简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅明星简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅明星简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅体育简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅体育简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅体育简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅体育简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅科技简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅科技简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅科技简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅科技简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅综合简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅综合简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅综合简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅综合简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅时尚简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅时尚简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅时尚简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅时尚简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅房产简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅房产简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅房产简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅房产简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅教育简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅教育简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅教育简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅教育简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅电竞简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅电竞简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅电竞简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅电竞简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅商业简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅商业简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅商业简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅商业简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅NBA简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅NBA简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅NBA简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅NBA简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅数码简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅数码简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅数码简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅数码简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅二次元简报 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅二次元简报 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅二次元简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅二次元简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅全网热议 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅全网热议 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅全网热议】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅全网热议】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅企鹅动态 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅企鹅动态 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅企鹅动态】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅企鹅动态】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅历史上的今天 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅历史上的今天 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅历史上的今天】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅历史上的今天】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消订阅大公司不开心 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消订阅大公司不开心 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅大公司不开心】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅大公司不开心】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-删除订阅号 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-删除订阅号 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已删除所有订阅号 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【删除订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    假如 用户已添加订阅内容【大公司不开心】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【删除订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content                     |
+      | 你的订阅号有：大公司不开心,汽车简报, 你要删除哪个订阅号呢？ |
+      | 你的订阅号有：汽车简报,大公司不开心, 你要删除哪个订阅号呢？ |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【大公司不开心】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅大公司不开心】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除所有订阅号 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TypicalCase @Subscription
+  场景大纲: 订阅号-删除所有订阅号 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【删除所有订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已为你删除所有的订阅号】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-订阅号{content}更新了什么 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-打开订阅号-订阅号{content}更新了什么 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端从文件【content.txt】里所有语料组合用户语音订阅号{content}更新了什么，而且回复：【好嘞 正在为你播放】 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-(打开|播放|收听)订阅号{content} -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-打开订阅号-(打开|播放|收听)订阅号{content} -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端从以下turn_on语料和文件【content.txt】里所有语料组合用户语音{turn_on}订阅号{content}，而且回复：【好嘞 正在为你播放】 ... untested in 0.000s
+      | turn_on |
+      | 打开      |
+      | 播放      |
+      | 收听      |
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已删除所有订阅号 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【你还没有订阅任何内容，快去订阅喜欢的内容吧】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【好嘞 正在为你播放汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    假如 用户已添加订阅内容【大公司不开心】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【打开订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content                      |
+      | 更新的订阅号有：大公司不开心,汽车简报, 你要收听哪个订阅号呢？ |
+      | 更新的订阅号有：汽车简报,大公司不开心, 你要收听哪个订阅号呢？ |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【汽车简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放汽车简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号 -- @1.2 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号 -- @1.2 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已删除所有订阅号 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【播放订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【你还没有订阅任何内容，快去订阅喜欢的内容吧】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【播放订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【好嘞 正在为你播放汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    假如 用户已添加订阅内容【大公司不开心】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【播放订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content                      |
+      | 更新的订阅号有：大公司不开心,汽车简报, 你要收听哪个订阅号呢？ |
+      | 更新的订阅号有：汽车简报,大公司不开心, 你要收听哪个订阅号呢？ |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【汽车简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放汽车简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号 -- @1.3 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号 -- @1.3 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已删除所有订阅号 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【听订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【你还没有订阅任何内容，快去订阅喜欢的内容吧】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【听订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【好嘞 正在为你播放汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    假如 用户已添加订阅内容【大公司不开心】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【听订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content                      |
+      | 更新的订阅号有：大公司不开心,汽车简报, 你要收听哪个订阅号呢？ |
+      | 更新的订阅号有：汽车简报,大公司不开心, 你要收听哪个订阅号呢？ |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【汽车简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放汽车简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号 -- @1.4 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号 -- @1.4 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已删除所有订阅号 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【收听订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【你还没有订阅任何内容，快去订阅喜欢的内容吧】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【收听订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【好嘞 正在为你播放汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    假如 用户已添加订阅内容【大公司不开心】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【收听订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content                      |
+      | 更新的订阅号有：大公司不开心,汽车简报, 你要收听哪个订阅号呢？ |
+      | 更新的订阅号有：汽车简报,大公司不开心, 你要收听哪个订阅号呢？ |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【汽车简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放汽车简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-打开订阅号-打开订阅号 -- @1.5 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-打开订阅号-打开订阅号 -- @1.5 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已删除所有订阅号 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅号更新了什么】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【你还没有订阅任何内容，快去订阅喜欢的内容吧】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅号更新了什么】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【好嘞 正在为你播放汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    假如 用户已添加订阅内容【大公司不开心】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【订阅号更新了什么】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content                      |
+      | 更新的订阅号有：大公司不开心,汽车简报, 你要收听哪个订阅号呢？ |
+      | 更新的订阅号有：汽车简报,大公司不开心, 你要收听哪个订阅号呢？ |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【汽车简报】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content          |
+      | 好嘞 正在为你播放汽车简报        |
+      | 您没有更新的消息了，去订阅更多的内容吧。 |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【TemplateRuntime】，【RenderPlayerInfo】 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【AudioPlayer】，【Play】，参数【playBehavior】为【REPLACE_ALL】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【AudioPlayer】，【PlaybackStutterFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-(订阅|关注){content} -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-(订阅|关注){content} -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端从以下add语料和文件【content.txt】里所有语料组合用户语音{add}{content}，而且回复：【好嘞 正在为你播放】 ... untested in 0.000s
+      | add |
+      | 订阅  |
+      | 关注  |
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-(添加|关注)订阅号{content} -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-(添加|关注)订阅号{content} -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端从以下add语料和文件【content.txt】里所有语料组合用户语音{add}订阅号{content}，而且回复：【已帮你订阅】 ... untested in 0.000s
+      | add |
+      | 添加  |
+      | 关注  |
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-添加订阅内容-把{content}(加入|加进)订阅列表 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-添加订阅内容-把{content}(加入|加进)订阅列表 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端从以下add语料和文件【content.txt】里所有语料组合用户语音把{content}{add}订阅列表，而且回复：【已帮你订阅】 ... untested in 0.000s
+      | add |
+      | 加入  |
+      | 加进  |
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-(删除|取消)订阅号{content} -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-(删除|取消)订阅号{content} -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端从以下minor语料和文件【content.txt】里所有语料组合用户语音{minor}订阅号{content}，而且回复：【已帮你订阅】 ... untested in 0.000s
+      | minor |
+      | 删除    |
+      | 取消    |
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-(删除|取消){content}[的]订阅 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-(删除|取消){content}[的]订阅 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端从以下minor语料和文件【content.txt】里所有语料组合用户语音{minor}{content}【的】订阅，而且回复：【已取消】 ... untested in 0.000s
+      | minor |
+      | 删除    |
+      | 取消    |
+    当 iFlyOS客户端从以下minor语料和文件【content.txt】里所有语料组合用户语音{minor}{content}【空】订阅，而且回复：【已取消】 ... untested in 0.000s
+      | minor |
+      | 删除    |
+      | 取消    |
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消(订阅|关注){content} -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消(订阅|关注){content} -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端从以下minor语料和文件【content.txt】里所有语料组合用户语音取消{minor}{content}，而且回复：【已取消】 ... untested in 0.000s
+      | minor |
+      | 订阅    |
+      | 关注    |
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-{content}取消(订阅|关注) -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-{content}取消(订阅|关注) -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端从以下minor语料和文件【content.txt】里所有语料组合用户语音{content}取消{minor}，而且回复：【已取消】 ... untested in 0.000s
+      | minor |
+      | 订阅    |
+      | 关注    |
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-把{content}从列表中(移除|删除) -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-把{content}从列表中(移除|删除) -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端从以下minor语料和文件【content.txt】里所有语料组合用户语音把{content}从列表中{minor}，而且回复：【已取消】 ... untested in 0.000s
+      | minor |
+      | 移除    |
+      | 删除    |
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-不想(订阅|关注)[订阅号]{content} -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-不想(订阅|关注)[订阅号]{content} -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    当 iFlyOS客户端从以下minor语料和文件【content.txt】里所有语料组合用户语音不想{minor}{content}，而且回复：【已取消】 ... untested in 0.000s
+      | minor |
+      | 订阅    |
+      | 关注    |
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消/删除订阅号 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消/删除订阅号 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已删除所有订阅号 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【删除订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    假如 用户已添加订阅内容【大公司不开心】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【删除订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content                     |
+      | 你的订阅号有：大公司不开心,汽车简报, 你要删除哪个订阅号呢？ |
+      | 你的订阅号有：汽车简报,大公司不开心, 你要删除哪个订阅号呢？ |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【大公司不开心】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅大公司不开心】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除订阅内容-取消/删除订阅号 -- @1.2 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-删除订阅内容-取消/删除订阅号 -- @1.2 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已删除所有订阅号 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    假如 用户已添加订阅内容【大公司不开心】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含以下内容之一 ... untested in 0.000s
+      | tts_content                     |
+      | 你的订阅号有：大公司不开心,汽车简报, 你要删除哪个订阅号呢？ |
+      | 你的订阅号有：汽车简报,大公司不开心, 你要删除哪个订阅号呢？ |
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechRecognizer】，【ExpectSpeech】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【大公司不开心】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已取消订阅大公司不开心】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除所有订阅号-(删除|取消)(全部|所有)[的]订阅号 -- @1.1 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-删除所有订阅号-(删除|取消)(全部|所有)[的]订阅号 -- @1.1 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【删除全部订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已为你删除所有的订阅号】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除所有订阅号-(删除|取消)(全部|所有)[的]订阅号 -- @1.2 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-删除所有订阅号-(删除|取消)(全部|所有)[的]订阅号 -- @1.2 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【删除所有订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已为你删除所有的订阅号】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除所有订阅号-(删除|取消)(全部|所有)[的]订阅号 -- @1.3 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-删除所有订阅号-(删除|取消)(全部|所有)[的]订阅号 -- @1.3 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消全部订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已为你删除所有的订阅号】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除所有订阅号-(删除|取消)(全部|所有)[的]订阅号 -- @1.4 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-删除所有订阅号-(删除|取消)(全部|所有)[的]订阅号 -- @1.4 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消所有订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已为你删除所有的订阅号】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除所有订阅号-(删除|取消)(全部|所有)[的]订阅号 -- @1.5 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-删除所有订阅号-(删除|取消)(全部|所有)[的]订阅号 -- @1.5 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【删除全部的订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已为你删除所有的订阅号】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除所有订阅号-(删除|取消)(全部|所有)[的]订阅号 -- @1.6 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-删除所有订阅号-(删除|取消)(全部|所有)[的]订阅号 -- @1.6 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【删除所有的订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已为你删除所有的订阅号】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除所有订阅号-(删除|取消)(全部|所有)[的]订阅号 -- @1.7 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-删除所有订阅号-(删除|取消)(全部|所有)[的]订阅号 -- @1.7 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消全部的订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已为你删除所有的订阅号】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="subscription.事件服务模块测试" name="订阅号-删除所有订阅号-(删除|取消)(全部|所有)[的]订阅号 -- @1.8 语料" status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ExtraCase @Subscription
+  场景大纲: 订阅号-删除所有订阅号-(删除|取消)(全部|所有)[的]订阅号 -- @1.8 语料
+    假如 用户已绑定iFlyOS客户端设备 ... untested in 0.000s
+    假如 用户已有带屏产品 ... untested in 0.000s
+    假如 用户产品【订阅号】技能已打开 ... untested in 0.000s
+    假如 用户已添加订阅内容【汽车简报】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechRecognizer】，【Recognize】，用户音频为【取消所有的订阅号】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    那么 iFlyOS服务端回复的directive为【SpeechSynthesizer】，【Speak】,TTS音频包含【已为你删除所有的订阅号】 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechStarted】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+    当 iFlyOS客户端发送event【SpeechSynthesizer】，【SpeechFinished】 ... untested in 0.000s
+    那么 iFlyOS服务端回复状态为【200】成功 ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

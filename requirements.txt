@@ -1,0 +1,6 @@
+behave==1.2.6
+lxml==4.2.1
+pyshould==0.7.1
+python-dateutil==2.7.2
+requests==2.18.4
+hyper==0.7.0
